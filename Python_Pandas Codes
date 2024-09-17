@@ -1,0 +1,4 @@
+## To find correlation between revenue versus review score
+
+correlation = steamDataSet['reviewScore'].corr(steamDataSet['revenue'])
+print(correlation)
