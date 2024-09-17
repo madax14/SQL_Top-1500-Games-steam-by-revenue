@@ -1,0 +1,2 @@
+## To find the correlation between the revenue versus the review score
+=CORREL(G2:G1501,E2:E1501)
