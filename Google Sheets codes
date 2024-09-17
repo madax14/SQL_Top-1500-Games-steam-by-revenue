@@ -1,3 +1,4 @@
 ## To find the correlation between the revenue versus the review score
+##Correlation is a statistical measure that indicates the relationship between two variables. It quantifies how closely two variables are related to each other.
 =CORREL($G$2:$G$1501,$E$2:$E$1501)
 
