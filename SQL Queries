@@ -1,0 +1,23 @@
+## copies sold per month
+SELECT
+SUM(copiesSold) AS `Copies Sold`,
+FORMAT_DATE('%m/%Y', releaseDate) AS `MonthYear`,
+FROM
+  `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+GROUP BY `MonthYear`
+ORDER BY `MonthYear` ASC
+
+## Checking for null values
+SELECT
+COUNT(name),
+COUNT(releaseDate),
+COUNT(copiesSold),
+COUNT(price),
+COUNT(revenue),
+COUNT(avgPlaytime),
+COUNT(reviewScore)
+FROM
+  `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+
+
+##
