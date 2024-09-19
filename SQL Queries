@@ -1,3 +1,21 @@
+##Table cleaned to use in Tableau
+SELECT
+name,
+FORMAT_DATE('%d/%m/%Y', releaseDate) AS `Release Date`,
+copiesSold AS `Copies Sold`,
+price,
+revenue,
+ROUND((revenue / SUM(revenue) OVER ()) * 100,2) AS percentage_of_total,
+ROUND(avgPlaytime) AS avgPlayTimeHour,
+reviewScore,
+publisherClass,
+publishers,
+developers
+FROM
+  `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+ORDER BY `revenue` DESC
+
+
 ## copies sold per month
 SELECT
 SUM(copiesSold) AS `Copies Sold`,
