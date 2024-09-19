@@ -10,7 +10,9 @@ ROUND(avgPlaytime) AS avgPlayTimeHour,
 reviewScore,
 publisherClass,
 publishers,
-developers
+developers,
+`Correlation RevenueXreview`,
+`Correlation SoldXPlayTime`
 FROM
   `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
 ORDER BY `revenue` DESC
