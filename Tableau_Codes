@@ -1,0 +1,13 @@
+## Show revenue as millions
+[Revenue]/1000000
+
+## To show thevalues in Billions, Millions and Thousands.
+IF SUM([Revenue])>= 1000000000 THEN
+       STR(ROUND(SUM([Revenue])/ 1000000000,2))+ "B" 
+ELSEIF SUM([Revenue])>= 1000000 THEN
+       STR(ROUND(SUM([Revenue])/ 1000000, 2)) + "M" 
+ELSEIF SUM([Revenue])>= 1000 THEN
+       STR(ROUND(SUM([Revenue])/ 1000, 2)) + "K" 
+ELSE
+    STR(SUM([Revenue])) 
+END
