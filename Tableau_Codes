@@ -1,3 +1,6 @@
+## To count how many days until a specific date.
+DATEDIFF('day', [Release Date], DATE("09/09/2024"))
+
 ## Show revenue as millions
 [Revenue]/1000000
 
