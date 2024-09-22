@@ -40,4 +40,11 @@ FROM
   `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
 
 
-##
+## Gaming industry, publishers
+SELECT
+publisherClass,
+COUNT(publisherClass) AS `Total Games`,
+COUNT(publisherClass)/100 AS Percentage,
+FROM
+  `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+GROUP BY publisherClass
