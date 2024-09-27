@@ -1,4 +1,4 @@
-##Table cleaned to use in Tableau
+## Full Table cleaned exported to use in Tableau
 SELECT
 name,
 FORMAT_DATE('%d/%m/%Y', releaseDate) AS `Release Date`,
@@ -38,6 +38,18 @@ COUNT(avgPlaytime),
 COUNT(reviewScore)
 FROM
   `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+
+
+## Top Developers in revenue
+SELECT
+developers,
+SUM(revenue) AS Total_revenue,
+publisherClass 
+FROM
+  `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
+GROUP BY developers, publisherClass
+HAVING Total_revenue > 100000000
+
 
 
 ## Gaming industry, publishers
