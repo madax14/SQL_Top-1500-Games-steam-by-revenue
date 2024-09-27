@@ -44,11 +44,13 @@ FROM
 SELECT
 developers,
 SUM(revenue) AS Total_revenue,
-publisherClass 
+publisherClass,
+name 
 FROM
   `top1500-steam-by-revenue.Top_1500_games.Steam_Revenue`
-GROUP BY developers, publisherClass
+GROUP BY developers, publisherClass,name
 HAVING Total_revenue > 100000000
+ORDER BY Total_revenue DESC
 
 
 
